@@ -18,8 +18,8 @@ public class Principal {
 //        int n = leitor.nextInt();
                 
         long inicio = 10;  // Valor inicial do intervalo
-        long fim = 500000000;     // Valor final do intervalo
-        long n = 16;        // Número de intervalos
+        long fim = 500000000;     // 500 milhões. Valor final do intervalo
+        long n = 16;        // Número de sub-intervalos
         
         System.out.println("Números primos do intervalo " + inicio + " e " + fim + ":");
         //Dividindo o intervalo em dois segmentos.
@@ -27,12 +27,12 @@ public class Principal {
         long tamanho = (fim - inicio + 1);      // Quantidade de números no intervalo
         long passo = tamanho / n;               // Tamanho base de cada sub-intervalo
         long resto = tamanho % n;               // Ajuste se não dividir exato
-        long atual = inicio;
+        long atual = inicio;                    // Início do primeiro sub-inervalo
         for (long i = 1; i <= n; i++) {
             long extra = (i <= resto) ? 1 : 0;  // Distribui o "resto" entre os primeiros intervalos
             long fimIntervalo = atual + passo + extra - 1;
 
-            System.out.println("Intervalo " + i + ": [" + atual + ", " + fimIntervalo + "]");
+            System.out.println("Sub-intervalo " + i + ": [" + atual + ", " + fimIntervalo + "]");
 
             //Inicializando o objeto que calcula os primos
             CalculaPrimo cp = new CalculaPrimo(atual, fimIntervalo);
@@ -41,7 +41,7 @@ public class Principal {
             Thread t = new Thread(cp);        
             t.start();
             
-            //Avança para o próximo segmento
+            //Avança para o próximo intervalo
             atual = fimIntervalo + 1;
         }
     }
