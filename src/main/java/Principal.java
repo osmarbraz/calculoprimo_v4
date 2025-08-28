@@ -17,7 +17,7 @@ public class Principal {
 //        System.out.print("Digite o número de intervalos: ");
 //        int n = leitor.nextInt();
                 
-        long inicio = 10;  // Valor inicial do intervalo
+        long inicio = 1;  // Valor inicial do intervalo
         long fim = 500000000;     // 500 milhões. Valor final do intervalo
         long n = 16;        // Número de sub-intervalos
         
