@@ -19,7 +19,7 @@ public class Principal {
                 
         long inicio = 1;  // Valor inicial do intervalo
         long fim = 500000000;     // 500 milhões. Valor final do intervalo
-        long n = 16;        // Número de sub-intervalos
+        long n = 4;        // Número de sub-intervalos
         
         System.out.println("Números primos do intervalo " + inicio + " e " + fim + ":");
         //Dividindo o intervalo em dois segmentos.
