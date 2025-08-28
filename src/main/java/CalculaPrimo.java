@@ -62,7 +62,7 @@ public class CalculaPrimo implements Runnable{
         for (long i = inicio; i <= fim; i++) {
             //Verifica se o número é primo
             if (ehPrimo(i)) {
-                //System.out.println(i);
+                System.out.println(i);
             }
         }
     }
